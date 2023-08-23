@@ -13,10 +13,10 @@ A API atua tanto procurando dados na base de dados, quanto filtrando os dados de
 
 É necessário a instalação do Python, MySQL, Redis e SQL Alchemy
 
-[### Python](https://www.python.org/downloads/)
+[Python](https://www.python.org/downloads/)
 
 
-[### MySQL](https://dev.mysql.com/downloads/workbench/)
+[MySQL](https://dev.mysql.com/downloads/workbench/)
 
 ## Contribuidores
 <table>
