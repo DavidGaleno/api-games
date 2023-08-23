@@ -11,7 +11,7 @@ A API atua tanto procurando dados na base de dados, quanto filtrando os dados de
 
 ## Requisitos
 
-É necessário a instalação do Python, MySQL, Redis e SQL Alchemy
+É necessário a instalação do Python, MySQL, Redis e Django
 
 [Python](https://www.python.org/downloads/)
 
