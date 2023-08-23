@@ -1,4 +1,4 @@
-# api-games
+# games-database api
 
 ## Introdução
 O projeto é uma api que permite a transmissão de informações sobre jogos de video-game.
