@@ -9,6 +9,15 @@ Cada público terá seus objetivos:
 - Os programadores irão procurar informações técnicas sobre os jogos, seja para se basearem para seus próprios jogos, seja por curiosidade
 A API atua tanto procurando dados na base de dados, quanto filtrando os dados de acordo com o público consumidor
 
+## Requisitos
+
+É necessário a instalação do Python, MySQL, Redis e SQL Alchemy
+
+[### Python](https://www.python.org/downloads/)
+
+
+[### MySQL](https://dev.mysql.com/downloads/workbench/)
+
 ## Contribuidores
 <table>
   <tr>
