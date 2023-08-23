@@ -1,4 +1,6 @@
 # api-games
+
+## Introdução
 O projeto é uma api que permite a transmissão de informações sobre jogos de video-game.
 A api poderá ser utilizada por 3 públicos: Acionistas, Fans e Programadores
 Cada público terá seus objetivos:
