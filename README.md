@@ -6,10 +6,13 @@ A api poderá ser utilizada por 3 públicos: Acionistas, Fans e Programadores
 
 ### Objetivo
 
+A API atua tanto procurando dados na base de dados, quanto filtrando os dados de acordo com o público consumidor.
+
+Cada público terá seu próprio objetivo:
+
 - Acionistas terão uma prioridade por informações financeiras, que serão utilizadas para manejar seus investimentos
 - Fans utilizaram somente por diversão, para saber meus sobre seus jogos favoritos
 - Os programadores irão procurar informações técnicas sobre os jogos, seja para se basearem para seus próprios jogos, seja por curiosidade
-A API atua tanto procurando dados na base de dados, quanto filtrando os dados de acordo com o público consumidor
 
 ## Requisitos
 
