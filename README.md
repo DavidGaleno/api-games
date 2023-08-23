@@ -3,7 +3,9 @@
 ## Introdução
 O projeto é uma api que permite a transmissão de informações sobre jogos de video-game.
 A api poderá ser utilizada por 3 públicos: Acionistas, Fans e Programadores
-Cada público terá seus objetivos:
+
+### Objetivo
+
 - Acionistas terão uma prioridade por informações financeiras, que serão utilizadas para manejar seus investimentos
 - Fans utilizaram somente por diversão, para saber meus sobre seus jogos favoritos
 - Os programadores irão procurar informações técnicas sobre os jogos, seja para se basearem para seus próprios jogos, seja por curiosidade
@@ -14,8 +16,6 @@ A API atua tanto procurando dados na base de dados, quanto filtrando os dados de
 É necessário a instalação do Python, MySQL, Redis e Django
 
 [Python](https://www.python.org/downloads/)
-
-
 [MySQL](https://dev.mysql.com/downloads/workbench/)
 
 ## Contribuidores
