@@ -18,7 +18,7 @@ A API atua tanto procurando dados na base de dados, quanto filtrando os dados de
 
 ## Funcionamento
 
-É necessário a instalação do Python, MySQL, Redis, Django e Insomnia
+É necessário a instalação do Python, MySQL, Redis, Flask e Insomnia
 
 [Python](https://www.python.org/downloads/)
 [MySQL](https://dev.mysql.com/downloads/workbench/)
