@@ -9,6 +9,7 @@ Cada público terá seus objetivos:
 - Os programadores irão procurar informações técnicas sobre os jogos, seja para se basearem para seus próprios jogos, seja por curiosidade
 A API atua tanto procurando dados na base de dados, quanto filtrando os dados de acordo com o público consumidor
 
+##Contribuidores
 <table>
   <tr>
     <td align="center"><img src="https://avatars.githubusercontent.com/u/92187957?v=4" width="100px;" alt=""/><br /><sub><b>David Galeno</b></sub></td>
