@@ -16,7 +16,7 @@ A API atua tanto procurando dados na base de dados, quanto filtrando os dados de
 
 ## Requisitos
 
-## Funcionamento
+### Funcionamento
 
 É necessário a instalação do Python, MySQL, Redis, FastAPI e Insomnia
 
