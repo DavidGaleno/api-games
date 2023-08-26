@@ -14,6 +14,12 @@ A API atua tanto procurando dados na base de dados, quanto filtrando os dados de
 - Fans utilizaram somente por diversão, para saber meus sobre seus jogos favoritos
 - Os programadores irão procurar informações técnicas sobre os jogos, seja para se basearem para seus próprios jogos, seja por curiosidade
 
+## Arquitetura
+- Por ser uma API que irá lidar somente com um tipo de entidade, iremos utilizar uma arquitetura monolítica
+  
+![image](https://github.com/DavidGaleno/games-database-API/assets/92187957/8ede39d4-adc1-495f-bcfc-c95b32cf911d)
+
+
 ## Requisitos
 
 ### Funcionamento
