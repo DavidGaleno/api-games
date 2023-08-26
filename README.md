@@ -17,8 +17,7 @@ A API atua tanto procurando dados na base de dados, quanto filtrando os dados de
 ## Arquitetura
 - Por ser uma API que irá lidar somente com um tipo de entidade, iremos utilizar uma arquitetura monolítica
   
-![image](https://github.com/DavidGaleno/games-database-API/assets/92187957/8ede39d4-adc1-495f-bcfc-c95b32cf911d)
-
+![image](https://github.com/DavidGaleno/games-database-API/assets/92187957/662fe60d-b428-4bd7-8aff-54d79010e560)
 
 ## Requisitos
 
