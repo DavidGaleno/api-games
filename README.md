@@ -17,19 +17,22 @@ A API atua tanto procurando dados na base de dados, quanto filtrando os dados de
 ## Arquitetura
 - Por ser uma API que irá lidar somente com um tipo de entidade, iremos utilizar uma arquitetura monolítica
 - Iremos utilizar dois bancos para comparações, visto que foi pedido por nosso professor
-  
-![image](https://github.com/DavidGaleno/games-database-API/assets/92187957/662fe60d-b428-4bd7-8aff-54d79010e560)
+
+![image](https://github.com/DavidGaleno/games-database-API/assets/92187957/75cc8e05-6d1a-4aa7-9157-0e4dc94c1df1)
+
+## Diagrama de Classes
+![games-database api _ Classes UML](https://github.com/DavidGaleno/games-database-API/assets/92187957/78e0944b-0af3-4f98-a7d7-3f7660a459ef)
 
 ## Requisitos
 
 ### Funcionamento
 
-É necessário a instalação do Python, MySQL, Redis, FastAPI e Insomnia
+É necessário a instalação do Python, Uvicorn MySQL, Redis, FastAPI e Insomnia
 
 [Python](https://www.python.org/downloads/)
 [MySQL](https://dev.mysql.com/downloads/workbench/)
 [Insomnia](https://insomnia.rest/download)
-
+[Uvicorn](https://www.uvicorn.org/)
 
 
 ## Contribuidores
