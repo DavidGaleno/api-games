@@ -17,11 +17,11 @@ A API atua tanto procurando dados na base de dados, quanto filtrando os dados de
 ## Arquitetura
 - Por ser uma API que irá lidar somente com um tipo de entidade, iremos utilizar uma arquitetura monolítica
 - Iremos utilizar dois bancos para comparações, visto que foi pedido por nosso professor
+![Arquitetura Games Database API drawio](https://github.com/DavidGaleno/games-database-API/assets/92187957/b269625e-96c0-4957-a989-b45ffc0b937b)
 
-![image](https://github.com/DavidGaleno/games-database-API/assets/92187957/75cc8e05-6d1a-4aa7-9157-0e4dc94c1df1)
 
 ## Diagrama de Classes
-![games-database api _ Classes UML](https://github.com/DavidGaleno/games-database-API/assets/92187957/78e0944b-0af3-4f98-a7d7-3f7660a459ef)
+![games-database api Classes UML](https://github.com/DavidGaleno/games-database-API/assets/92187957/4c2e9d08-2ae9-487b-a7fa-0c8ec56b6f4b)
 
 ## Requisitos
 
