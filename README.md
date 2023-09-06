@@ -17,7 +17,7 @@ A API atua tanto procurando dados na base de dados, quanto filtrando os dados de
 ## Arquitetura
 - Por ser uma API que irá lidar somente com um tipo de entidade, iremos utilizar uma arquitetura monolítica
 - Iremos utilizar dois bancos para comparações, visto que foi pedido por nosso professor
-![Arquitetura Games Database API](https://github.com/DavidGaleno/games-database-API/assets/92187957/8863a722-288a-4404-a61a-ebe5fef0dcfd)
+![Arquitetura Games Database API](https://github.com/DavidGaleno/games-database-API/assets/92187957/dee96732-54a4-4a4e-908d-0a3d2a8360ff)
 
 
 
