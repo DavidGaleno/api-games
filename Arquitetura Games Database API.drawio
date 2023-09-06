@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-06T21:28:10.138Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="_b22LzbYzBm_mB-SekKM" version="21.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-06T23:28:51.549Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="Lvjhs1e97AA1cEfvweSx" version="21.7.2" type="github">
   <diagram name="Page-1" id="oelpLLZQ5CpzUOGoIRx6">
     <mxGraphModel dx="2284" dy="758" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -12,18 +12,6 @@
         <mxCell id="EXpLw-7ZhNTg4ZC5dxBc-3" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Cliente&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="730" y="380" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="EXpLw-7ZhNTg4ZC5dxBc-8" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Banco de Dados&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
-          <mxGeometry x="200" y="560" width="80" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="EXpLw-7ZhNTg4ZC5dxBc-12" value="MYSQL" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="110" y="590" width="70" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="EXpLw-7ZhNTg4ZC5dxBc-13" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Banco de Dados&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
-          <mxGeometry x="425" y="560" width="80" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="EXpLw-7ZhNTg4ZC5dxBc-18" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;REDIS&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="520" y="600" width="70" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="SBNdTW3bbpPaULmrXrV8-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" parent="1" source="EXpLw-7ZhNTg4ZC5dxBc-19" target="SBNdTW3bbpPaULmrXrV8-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -36,20 +24,20 @@
         <mxCell id="EXpLw-7ZhNTg4ZC5dxBc-21" value="Data Access" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="EXpLw-7ZhNTg4ZC5dxBc-19" vertex="1">
           <mxGeometry y="60" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EXpLw-7ZhNTg4ZC5dxBc-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="EXpLw-7ZhNTg4ZC5dxBc-21" target="EXpLw-7ZhNTg4ZC5dxBc-8" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="EXpLw-7ZhNTg4ZC5dxBc-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="EXpLw-7ZhNTg4ZC5dxBc-21" target="EXpLw-7ZhNTg4ZC5dxBc-13" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="EXpLw-7ZhNTg4ZC5dxBc-30" value="" style="swimlane;startSize=0;" parent="1" vertex="1">
           <mxGeometry x="90" y="85" width="580" height="625" as="geometry" />
         </mxCell>
         <mxCell id="EXpLw-7ZhNTg4ZC5dxBc-11" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;SQL Alchemy&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="EXpLw-7ZhNTg4ZC5dxBc-30" vertex="1">
-          <mxGeometry x="20" y="375" width="110" height="30" as="geometry" />
+          <mxGeometry x="130" y="375" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="EXpLw-7ZhNTg4ZC5dxBc-10" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;FASTAPI&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="EXpLw-7ZhNTg4ZC5dxBc-30" vertex="1">
-          <mxGeometry x="225" y="375" width="80" height="30" as="geometry" />
+          <mxGeometry x="305" y="375" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EXpLw-7ZhNTg4ZC5dxBc-8" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Banco de Dados&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="EXpLw-7ZhNTg4ZC5dxBc-30" vertex="1">
+          <mxGeometry x="225" y="485" width="80" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="EXpLw-7ZhNTg4ZC5dxBc-12" value="MYSQL" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="EXpLw-7ZhNTg4ZC5dxBc-30" vertex="1">
+          <mxGeometry x="140" y="505" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="EXpLw-7ZhNTg4ZC5dxBc-31" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;Cliente-Servidor&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="265" y="20" width="200" height="40" as="geometry" />
@@ -68,6 +56,9 @@
         </mxCell>
         <mxCell id="SBNdTW3bbpPaULmrXrV8-4" value="Steam Web API" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="-100" y="180" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EXpLw-7ZhNTg4ZC5dxBc-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.967;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="EXpLw-7ZhNTg4ZC5dxBc-21" target="EXpLw-7ZhNTg4ZC5dxBc-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
