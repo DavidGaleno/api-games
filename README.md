@@ -26,14 +26,28 @@ A API atua tanto procurando dados na base de dados, quanto filtrando os dados de
 
 ## Requisitos
 
-### Funcionamento
+### Ambiente
 
-É necessário a instalação do Python, Uvicorn MySQL, Redis, FastAPI e Insomnia
+É necessário a instalação do Python, MySQL e Insomnia <br />
+
+Segue abaixo o link para download de cada uma das ferramentas:
 
 [Python](https://www.python.org/downloads/)
 [MySQL](https://dev.mysql.com/downloads/workbench/)
 [Insomnia](https://insomnia.rest/download)
-[Uvicorn](https://www.uvicorn.org/)
+
+#### Fast API
+
+Para instalar o fastapi, basta abrir o terminal e entrar na pasta do projeto com o comando ``` cd api ``` e executar o comando ``` pip install fastapi ```
+
+#### Uvicorn
+
+Para instalar o uvicorn, basta abrir o terminal e entrar na pasta do projeto com o comando ``` cd api ``` e executar o comando ``` pip install uvicorn ```
+
+### Execução
+
+- Para executar a aplicação, basta abrir o terminal e entrar na pasta do projeto com o comando ``` cd api ``` e executar o comando ``` python api.py ``` 
+- Após isso, abra o aplicativo do Insomnia ou a sua própria aplicação e utilize as rotas disponibilizadas pelo software
 
 
 ## Contribuidores
