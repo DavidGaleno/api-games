@@ -44,12 +44,6 @@ Para instalar o fastapi, basta abrir o terminal e entrar na pasta do projeto com
 
 Para instalar o uvicorn, basta abrir o terminal e entrar na pasta do projeto com o comando ``` cd api ``` e executar o comando ``` pip install uvicorn ```
 
-### Execução
-
-- Para executar a aplicação, basta abrir o terminal e entrar na pasta do projeto com o comando ``` cd api ``` e executar o comando ``` python api.py ``` 
-- Após isso, abra o aplicativo do Insomnia ou a sua própria aplicação e utilize as rotas disponibilizadas pelo software
-
-
 ## Contribuidores
 <table>
   <tr>
