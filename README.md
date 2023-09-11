@@ -36,13 +36,16 @@ Segue abaixo o link para download de cada uma das ferramentas:
 [MySQL](https://dev.mysql.com/downloads/workbench/)
 [Insomnia](https://insomnia.rest/download)
 
-#### Fast API
+#### Execução
 
-Para instalar o fastapi, basta abrir o terminal e entrar na pasta do projeto com o comando ``` cd api ``` e executar o comando ``` pip install fastapi ```
+1. Selecione o local da sua máquina onde deseja salvar o projeto
+2. Abra o powershell ou cmd no local selecionado
+3. Digite  ```git clone <link do repositório>``` para clonar o repositório
+4. Digite ```cd games-database-API``` para entrar na pasta do arquivo
+5. Digite ```pip install -r requirements.txt``` para instalar as dependências
+6. Digite ```python main.py``` para executar a api
+7. Por fim, abra o Insomnia e realize as requisições na URI desejada
 
-#### Uvicorn
-
-Para instalar o uvicorn, basta abrir o terminal e entrar na pasta do projeto com o comando ``` cd api ``` e executar o comando ``` pip install uvicorn ```
 
 ## Contribuidores
 <table>
