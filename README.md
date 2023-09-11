@@ -36,7 +36,7 @@ Segue abaixo o link para download de cada uma das ferramentas:
 [MySQL](https://dev.mysql.com/downloads/workbench/)
 [Insomnia](https://insomnia.rest/download)
 
-#### Execução
+### Execução
 
 1. Selecione o local da sua máquina onde deseja salvar o projeto
 2. Abra o powershell ou cmd no local selecionado
