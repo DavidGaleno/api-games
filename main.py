@@ -1,13 +1,12 @@
-from fastapi import FastAPI
-from models.game import Game
-import datetime
+from fastapi import FastAPI,HTTPException,status,Response,Path
+from api.routes import games_router
 
-app = FastAPI()
+app = FastAPI(title='Games Database API',description="This api is used to get data that interests investors, fans and developers. This is a college project of the discipline Advanced Topics of Programming",version='0.0.1',)
 
-@app.get("/")
-async def game_test():
-    game = Game(name='Starfield',developer='Bethesda',franchise='Starfield',genre=['Action','RPG','FPS'],publisher='Microsoft',release_date=datetime.date(2023,9,6))
-    return game
+
+app.include_router(games_router.router,tags=['games'])
+
+
 
 if __name__ == '__main__':
     import uvicorn
