@@ -1,21 +1,15 @@
-from datetime import date
+import datetime
 from pydantic import BaseModel
 
+from typing import List
 class Game(BaseModel):
 
     name: str
-    genre: int
+    genre: List[str]
     franchise: str
-    release_date: date
+    release_date: datetime.date
     developer: str
     publisher: str
 
-    def __init__(self,name,genre,franchise,release_date,developer,publisher):
-        self.name = name
-        self.genre = genre
-        self.franchise = franchise
-        self.release_date = release_date
-        self.developer = developer
-        self.publisher = publisher
 
     

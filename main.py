@@ -1,9 +1,13 @@
 from fastapi import FastAPI
+from models.game import Game
+import datetime
+
 app = FastAPI()
 
 @app.get("/")
 async def game_test():
-    return {"name": "Starfie ld","publisher":"Microsoft","developer":"Bethesda Studios", "release_date":"2023-08-06","plataforms":["Steam","Xbox"]}
+    game = Game(name='Starfield',developer='Bethesda',franchise='Starfield',genre=['Action','RPG','FPS'],publisher='Microsoft',release_date=datetime.date(2023,9,6))
+    return game
 
 if __name__ == '__main__':
     import uvicorn
