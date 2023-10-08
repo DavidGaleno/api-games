@@ -1,7 +1,7 @@
 from fastapi import APIRouter,Path,status,HTTPException,Response
 from typing import List
 import datetime
-from models.game import Game
+from game_model import Game
 
 router = APIRouter()
 

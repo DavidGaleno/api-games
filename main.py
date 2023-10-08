@@ -1,5 +1,5 @@
-from fastapi import FastAPI,HTTPException,status,Response,Path
-from api.routes import games_router
+from fastapi import FastAPI
+from api.v1.routes import games_router
 
 app = FastAPI(title='Games Database API',description="This api is used to get data that interests investors, fans and developers. This is a college project of the discipline Advanced Topics of Programming",version='0.0.1',)
 

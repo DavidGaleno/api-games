@@ -1,4 +1,4 @@
-from game import Game
+from game_model import Game
 from typing import List
 
 class GameFan(Game):

@@ -1,4 +1,4 @@
-from game import Game
+from game_model import Game
 
 class game_developer(Game):
     programming_language: str

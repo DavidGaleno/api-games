@@ -1,4 +1,4 @@
-from game import Game
+from game_model import Game
 
 class GameAccountant(Game):
     production_cost: float
