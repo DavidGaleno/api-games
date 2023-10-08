@@ -3,6 +3,7 @@ from core.database import engine
 
 async def create_tables() -> None:
     from models.game_model import GameModel
+    from models.other_models import GenreModel,FranchiseModel,DevelopersModel,PublishersModel
 
 
     async with engine.begin() as conn:
