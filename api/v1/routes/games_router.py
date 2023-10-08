@@ -18,8 +18,8 @@ async def get_games(db: AsyncSession = Depends(get_session)):
     async with db as session:
         query = select(GameModel).options(joinedload(GameModel.genre)).options(joinedload(GameModel.developers)).options(joinedload(GameModel.publisher)).options(joinedload(GameModel.franchise))
         result = await session.execute(query)
-        game : List[GameModel] = result.scalars().all()
-        return game
+        games : List[GameModel] = result.scalars().all()
+        return games
 
 @router.get("/games/{id}",summary='Retorna um jogo específico',status_code=status.HTTP_200_OK)
 async def get_game(id: int = Path(title='id do jogo',description='Deve ser maior que 0',gt=0),db: AsyncSession = Depends(get_session)):
@@ -77,6 +77,7 @@ async def delete_game(id: int = Path(title='id do jogo',description='Deve ser ma
         query = select(GameModel).filter(GameModel.id == id)
         result = await session.execute(query)
         game_to_delete = result.scalar_one_or_none()
+        
 
         if(game_to_delete):
             await session.delete(game_to_delete)
