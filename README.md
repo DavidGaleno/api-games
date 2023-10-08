@@ -17,7 +17,7 @@ A API atua tanto procurando dados na base de dados, quanto filtrando os dados de
 ## Arquitetura
 - Por ser uma API que irá lidar somente com um tipo de entidade, iremos utilizar uma arquitetura monolítica
 - Iremos utilizar dois bancos para comparações, visto que foi pedido por nosso professor
-![Arquitetura Games Database API drawio](https://github.com/DavidGaleno/games-database-API/assets/92187957/e7d30be1-91d7-4002-abe5-e844cb8b0be9)
+![Arquitetura Games Database API](https://github.com/DavidGaleno/games-database-API/assets/92187957/bc809d81-23d4-4663-9e50-ddbbb3f29be0)
 
 
 
@@ -33,7 +33,7 @@ A API atua tanto procurando dados na base de dados, quanto filtrando os dados de
 Segue abaixo o link para download de cada uma das ferramentas:
 
 [Python](https://www.python.org/downloads/)
-[MySQL](https://dev.mysql.com/downloads/workbench/)
+[PostgreSQL](https://www.postgresql.org/download/)
 [Insomnia](https://insomnia.rest/download)
 
 ### Execução
