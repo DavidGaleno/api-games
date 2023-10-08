@@ -2,10 +2,6 @@ from core.configs import settings
 from core.database import engine
 
 async def create_tables() -> None:
-    from models.other_models import DevelopersModel
-    from models.other_models import FranchiseModel
-    from models.other_models import PublishersModel
-    from models.other_models import GenreModel
     from models.game_model import GameModel
 
 

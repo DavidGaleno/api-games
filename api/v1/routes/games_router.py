@@ -1,47 +1,45 @@
-from fastapi import APIRouter,Path,status,HTTPException,Response
+from fastapi import APIRouter,Path,status,HTTPException,Response,Depends
 from typing import List
 import datetime
-from game_model import Game
+
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.future import select
+
+from models.game_model import GameModel
+from schemas.game_schema import GameSchema
+from core.deps import get_session 
+
+from models.game_model import GameModel
 
 router = APIRouter()
 
-games : List[Game] = [Game(name='starfield',developer='bethesda',franchise='starfield',genre=['action','rpg','fps'],publisher='microsoft',release_date=datetime.date(2023,9,6)), Game(name='resident_evil_4',developer='capcom',franchise='resident_evil',genre=['action_adventure','3° person shooter','horror'],publisher='capcom',release_date=datetime.date(2005,2,10))]
 
 
-@router.get("/games",summary='Retorna uma lista de games',response_model=List[Game])
-async def get_games():
-    return games
+@router.get("/games",summary='Retorna uma lista de games')
+async def get_games(db: AsyncSession = Depends(get_session)):
+    async with db as session:
+        query = select(GameModel)
+        result = await session.execute(query)
+        cursos : List[GameModel] = result.scalars().all()
+        return cursos
 
-@router.get("/games/{id}",summary='Retorna um jogo específico',response_model=Game)
+@router.get("/games/{id}",summary='Retorna um jogo específico')
 async def get_game(id: int = Path(title='id do jogo',description='Deve ser maior que 0',gt=0)):
-   try:
-       game = games[id - 1]
-       return game
-   except KeyError:
-       raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,detail='Jogo não encontrado')
+   pass
    
-@router.post("/games")
-async def add_game(game: Game):
-    if game not in games:
-        games.append(game)
-        return game
-    else:
-        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail='Jogo já cadastrado')
+@router.post("/games", summary="Cadastra um novo jogo", status_code=status.HTTP_201_CREATED)
+async def add_game(game: GameSchema,db: AsyncSession = Depends(get_session)):
+    new_game = GameModel(name=game.name,developer=game.developer,publisher=game.publisher,franchise=game.franchise,genre=game.genre,release_date=datetime.date(2000,2,2))
+
+    db.add(new_game)
+    await db.commit()
+    return new_game
+    
 
 @router.put("/games/{id}")
-async def update_game(id: int,game : Game):
-    try:
-        index = id - 1
-        games[index] = game
-        return game
-    except IndexError:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='Jogo não encontrado')
+async def update_game(id: int,game : GameSchema):
+    pass
     
 @router.delete("/games/{id}")
 async def delete_game(id: int):
-    try:
-        index = id - 1
-        games.pop(index)
-        return Response(status_code=status.HTTP_204_NO_CONTENT)
-    except IndexError:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='Jogo não encontrado')
+    pass

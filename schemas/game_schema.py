@@ -1,15 +1,14 @@
 from pydantic import BaseModel as SchemaBaseModel
-from typing import Optional,List
-from datetime import datetime
+from typing import Optional
+from datetime import date
 
 class GameSchema(SchemaBaseModel):
-    id: Optional[int]
     name: str
-    genre: List[str]
-    franchise: List[str]
-    release_date: datetime.date
+    genre: str
+    franchise: str
+    release_date: date
     developer: str
     publisher: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True
