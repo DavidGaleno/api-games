@@ -19,11 +19,6 @@ A API atua tanto procurando dados na base de dados, quanto filtrando os dados de
 - Iremos utilizar dois bancos para comparações, visto que foi pedido por nosso professor
 ![Arquitetura Games Database API](https://github.com/DavidGaleno/games-database-API/assets/92187957/bc809d81-23d4-4663-9e50-ddbbb3f29be0)
 
-
-
-## Diagrama de Classes
-![Entidades drawio](https://github.com/DavidGaleno/games-database-API/assets/92187957/5eb5c2f2-5321-48e2-a8fc-9a1de91bb16b)
-
 ## Requisitos
 
 ### Ambiente
