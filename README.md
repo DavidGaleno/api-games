@@ -22,7 +22,7 @@ A API atua tanto procurando dados na base de dados, quanto filtrando os dados de
 
 
 ## Diagrama de Classes
-![games-database api Classes UML](https://github.com/DavidGaleno/games-database-API/assets/92187957/4c2e9d08-2ae9-487b-a7fa-0c8ec56b6f4b)
+![Entidades drawio](https://github.com/DavidGaleno/games-database-API/assets/92187957/5eb5c2f2-5321-48e2-a8fc-9a1de91bb16b)
 
 ## Requisitos
 
