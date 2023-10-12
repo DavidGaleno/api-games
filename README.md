@@ -46,7 +46,7 @@ Segue abaixo o link para download de cada uma das ferramentas:
 13. Por fim, abra o Insomnia e realize as requisições na URI desejada
 #### Cuidados
 
-*** Ao excluir um item da tabela gênero que está sendo usado por um item da tabela jogo, ambos serão excluídos
+*** Ao excluir um item da tabela gênero que está sendo usado por um item da tabela jogo, ambos serão excluídos <br>
 *** É necessário digitar os campos de gênero, franquia, desenvolvedora e publicadora exatamente como estão nas tabelas ou ocorrerá um erro. Por isso, realize um GET em cada uma das entidades para saber como se escreve exatamente antes de realizar a operação de POST no jogo.
 
 
