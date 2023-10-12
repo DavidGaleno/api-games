@@ -18,9 +18,9 @@ class GameModel(settings.DBBASEMODEL):
     developer_id: int = Column(Integer,ForeignKey('developers.id'),nullable=False)
     publisher_id: int = Column(Integer,ForeignKey('publishers.id'),nullable=False)
     genre =  relationship('GenreModel',backref='games')
-    franchise = relationship('FranchiseModel',backref='games')
-    developers = relationship('DevelopersModel',backref='games')
-    publisher = relationship('PublishersModel',backref='games')
+    franchise = relationship('FranchiseModel', backref='games')
+    developers = relationship('DevelopersModel', backref='games')
+    publisher = relationship('PublishersModel', backref='games')
 
     @validator('name')
     def name_validate(cls,value):

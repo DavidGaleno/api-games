@@ -1,5 +1,4 @@
 from game_model import Game
-
 class GameAccountant(Game):
     production_cost: float
     marketing_cost: float
