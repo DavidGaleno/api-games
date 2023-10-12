@@ -42,7 +42,9 @@ Segue abaixo o link para download de cada uma das ferramentas:
 9. Digite ```pip install -r requirements.txt``` para instalar as dependências
 10. Digite ```python create_table.py``` para criar as tabelas no banco de dados
 11. Digite ```python main.py``` para executar a api
-12. Por fim, abra o Insomnia e realize as requisições na URI desejada
+12. Acesse o link ```http://localhost:8000/docs``` para ver quais entidades e as operações que podem ser realizadas com cada uma delas
+13. Por fim, abra o Insomnia e realize as requisições na URI desejada
+*** Ao excluir alguma entrada na entidade gênero que foi usada ao fazer um post em um jogo, podem ocorrer problemas
 
 
 ## Contribuidores
