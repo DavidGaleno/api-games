@@ -35,7 +35,7 @@ Segue abaixo o link para download de cada uma das ferramentas:
 
 1. Selecione o local da sua máquina onde deseja salvar o projeto
 2. Abra o powershell ou cmd no local selecionado
-5. Digite  ```git clone <link do repositório>``` para clonar o repositório
+5. Digite  ```git clone https://github.com/DavidGaleno/games-database-API.git``` para clonar o repositório
 6. Abra a pasta do projeto, depois abra a pasta core e por fim abra o arquivo ```configs.py``` em um editor de texto ou em uma IDE
 7. Modifique a linha ```DB_URL: str = 'postgresql+asyncpg://postgres:ipe%402023@localhost:5432/games_database_api'```, substituindo ```postgres:ipe%402023``` por seu usuário do postgre antes dos dois pontos e pela sua senha após os dois pontos
 8. Volte para o Powershell ou CMD e digite ```cd games-database-API``` para entrar na pasta do arquivo
