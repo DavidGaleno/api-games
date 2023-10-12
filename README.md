@@ -44,7 +44,7 @@ Segue abaixo o link para download de cada uma das ferramentas:
 11. Digite ```python main.py``` para executar a api
 12. Acesse o link ```http://localhost:8000/docs``` para ver quais entidades e as operações que podem ser realizadas com cada uma delas
 13. Por fim, abra o Insomnia e realize as requisições na URI desejada
-*** Ao excluir alguma entrada na entidade gênero que foi usada ao fazer um post em um jogo, podem ocorrer problemas
+*** Ao tentar excluir entradas nas tabelas gênero que foram usadas para cadastrar jogos, podem ocorrer problemas
 
 
 ## Contribuidores
