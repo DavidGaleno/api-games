@@ -40,7 +40,7 @@ Segue abaixo o link para download de cada uma das ferramentas:
 7. Modifique a linha ```DB_URL: str = 'postgresql+asyncpg://postgres:ipe%402023@localhost:5432/games_database_api'```, substituindo ```postgres:ipe%402023``` por seu usuário do postgre antes dos dois pontos e pela sua senha após os dois pontos
 8. Volte para o Powershell ou CMD e digite ```cd games-database-API``` para entrar na pasta do arquivo
 9. Digite ```pip install -r requirements.txt``` para instalar as dependências
-10. Digite ```python create_table.py``` para criar as tabelas no banco de dados
+10. Digite ```python create_tables.py``` para criar as tabelas no banco de dados
 11. Digite ```python main.py``` para executar a api
 12. Acesse o link ```http://localhost:8000/docs``` para ver quais entidades e as operações que podem ser realizadas com cada uma delas
 13. Agora abra o Insomnia e realize as requisições na URI desejada
