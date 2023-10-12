@@ -44,7 +44,11 @@ Segue abaixo o link para download de cada uma das ferramentas:
 11. Digite ```python main.py``` para executar a api
 12. Acesse o link ```http://localhost:8000/docs``` para ver quais entidades e as operações que podem ser realizadas com cada uma delas
 13. Por fim, abra o Insomnia e realize as requisições na URI desejada
-*** Ao tentar excluir entradas nas tabelas gênero que foram usadas para cadastrar jogos, podem ocorrer problemas
+    
+#### Cuidados
+
+*** Ao excluir um item da tabela gênero que está sendo usado por um item da tabela jogo, ambos serão excluídos
+*** É necessário digitar os campos de gênero, franquia, desenvolvedora e publicadora exatamente como estão nas tabelas ou ocorrerá um erro. Por isso, realize um GET em cada uma das entidades para saber como se escreve exatamente antes de realizar a operação de POST no jogo.
 
 
 ## Contribuidores
