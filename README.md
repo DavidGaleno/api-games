@@ -33,12 +33,12 @@ Segue abaixo o link para download de cada uma das ferramentas:
 
 ### Execução
 
-1.Crie um database com o nome games_database_api no postgreSQL
+1. Crie um database com o nome games_database_api no postgreSQL
 2. Selecione o local da sua máquina onde deseja salvar o projeto
 3. Abra o powershell ou cmd no local selecionado
 4. Digite  ```git clone https://github.com/DavidGaleno/games-database-API.git``` para clonar o repositório
 5. Abra a pasta do projeto, depois abra a pasta core e por fim abra o arquivo ```configs.py``` em um editor de texto ou em uma IDE
-6. Modifique a linha ```DB_URL: str = 'postgresql+asyncpg://postgres:ipe%402023@localhost:5432/games_database_api'```, substituindo ```postgres:ipe%402023``` por seu usuário do postgre antes dos dois pontos e pela sua senha após os dois pontos
+6. Modifique a linha ```DB_URL: str = 'postgresql+asyncpg://postgres:ipe%402023@localhost:5432/games_database_api'```, substituindo ```postgres:ipe%402023``` por seu usuário do postgre     antes dos dois pontos e pela sua senha após os dois pontos
 7. Volte para o Powershell ou CMD e digite ```cd games-database-API``` para entrar na pasta do arquivo
 8. Digite ```pip install -r requirements.txt``` para instalar as dependências
 9. Digite ```python create_tables.py``` criar as tabelas no banco de dados
