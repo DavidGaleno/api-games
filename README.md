@@ -33,18 +33,19 @@ Segue abaixo o link para download de cada uma das ferramentas:
 
 ### Execução
 
-1. Selecione o local da sua máquina onde deseja salvar o projeto
-2. Abra o powershell ou cmd no local selecionado
-5. Digite  ```git clone https://github.com/DavidGaleno/games-database-API.git``` para clonar o repositório
-6. Abra a pasta do projeto, depois abra a pasta core e por fim abra o arquivo ```configs.py``` em um editor de texto ou em uma IDE
-7. Modifique a linha ```DB_URL: str = 'postgresql+asyncpg://postgres:ipe%402023@localhost:5432/games_database_api'```, substituindo ```postgres:ipe%402023``` por seu usuário do postgre antes dos dois pontos e pela sua senha após os dois pontos
-8. Volte para o Powershell ou CMD e digite ```cd games-database-API``` para entrar na pasta do arquivo
-9. Digite ```pip install -r requirements.txt``` para instalar as dependências
-10. Digite ```python create_tables.py``` para criar as tabelas no banco de dados
-11. Digite ```python main.py``` para executar a api
-12. Acesse o link ```http://localhost:8000/docs``` para ver quais entidades e as operações que podem ser realizadas com cada uma delas
-13. Agora abra o Insomnia e realize as requisições na URI desejada
-14. Por fim, leia os cuidados abaixo
+1.Crie um database com o nome games no postgreSQL
+2. Selecione o local da sua máquina onde deseja salvar o projeto
+3. Abra o powershell ou cmd no local selecionado
+4. Digite  ```git clone https://github.com/DavidGaleno/games-database-API.git``` para clonar o repositório
+5. Abra a pasta do projeto, depois abra a pasta core e por fim abra o arquivo ```configs.py``` em um editor de texto ou em uma IDE
+6. Modifique a linha ```DB_URL: str = 'postgresql+asyncpg://postgres:ipe%402023@localhost:5432/games_database_api'```, substituindo ```postgres:ipe%402023``` por seu usuário do postgre antes dos dois pontos e pela sua senha após os dois pontos
+7. Volte para o Powershell ou CMD e digite ```cd games-database-API``` para entrar na pasta do arquivo
+8. Digite ```pip install -r requirements.txt``` para instalar as dependências
+9. Digite ```python create_tables.py``` criar as tabelas no banco de dados
+10. Digite ```python main.py``` para executar a api
+11. Acesse o link ```http://localhost:8000/docs``` para ver quais entidades e as operações que podem ser realizadas com cada uma delas
+12. Agora abra o Insomnia e realize as requisições na URI desejada
+13. Por fim, leia os cuidados abaixo
 #### Cuidados
 
 *** Ao excluir um item da tabela gênero que está sendo usado por um item da tabela jogo, ambos serão excluídos <br>
