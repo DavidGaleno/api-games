@@ -33,7 +33,7 @@ Segue abaixo o link para download de cada uma das ferramentas:
 
 ### Execução
 
-1.Crie um database com o nome games no postgreSQL
+1.Crie um database com o nome games_database_api no postgreSQL
 2. Selecione o local da sua máquina onde deseja salvar o projeto
 3. Abra o powershell ou cmd no local selecionado
 4. Digite  ```git clone https://github.com/DavidGaleno/games-database-API.git``` para clonar o repositório
