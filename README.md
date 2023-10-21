@@ -33,16 +33,15 @@ Segue abaixo o link para download de cada uma das ferramentas:
 
 ### Execução
 
-1. Crie um database com o nome games_database_api no postgreSQL
-2. Selecione o local da sua máquina onde deseja salvar o projeto
-3. Abra o powershell ou cmd no local selecionado
-4. Digite  ```git clone https://github.com/DavidGaleno/games-database-API.git``` para clonar o repositório
-5. Digite cd games_database_api
-6. Digite ```pip install -r requirements.txt``` para instalar as dependências
-7. Digite ```python manage.py runserver``` para executar a api
-8. Acesse o link ```http://localhost:8000/``` para ver quais entidades e as operações que podem ser realizadas com cada uma delas
-9. Agora abra o Insomnia e realize as requisições na URI desejada
-10. Por fim, leia os cuidados abaixo
+1. Selecione o local da sua máquina onde deseja salvar o projeto
+2. Abra o powershell ou cmd no local selecionado
+3. Digite  ```git clone https://github.com/DavidGaleno/games-database-API.git``` para clonar o repositório
+4. Digite cd games_database_api
+5. Digite ```pip install -r requirements.txt``` para instalar as dependências
+6. Digite ```python manage.py runserver``` para executar a api
+7. Acesse o link ```http://localhost:8000/``` para ver quais entidades e as operações que podem ser realizadas com cada uma delas
+8. Agora abra o Insomnia e realize as requisições na URI desejada
+9. Por fim, leia os cuidados abaixo
 #### Cuidados
 
 *** Ao excluir um item da tabela genre, franchis, developer ou publisher que está sendo usado por um item da tabela game, ambos serão excluídos <br>
