@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from games_database_api.views import GamesViewSet,GenreViewSet,FranchiseViewSet,DeveloperViewSet,PublisherViewSet,GameGenreViewSet,ListGameGenreViewSet
+from games_database_api.views import GamesViewSet,GenreViewSet,FranchiseViewSet,DeveloperViewSet,PublisherViewSet,GameGenreViewSet,ListGameGenreViewSet,ListGameFranchiseViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
@@ -29,5 +29,6 @@ router.register('gamegenres',viewset=GameGenreViewSet,basename='GameGenres')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include(router.urls)),
-    path('genres/<int:pk>/games',ListGameGenreViewSet.as_view())
+    path('genres/<int:pk>/games',ListGameGenreViewSet.as_view()),
+    path('franchises/<int:pk>/games',ListGameFranchiseViewSet.as_view())
 ]

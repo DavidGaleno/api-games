@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from rest_framework import viewsets,generics
 from games_database_api.models import Game,Genre,Franchise,Publisher,Developer
-from games_database_api.serializer import GameSerializer,GenreSerializer,FranchiseSerializer,GameGenre,DeveloperSerializer,PublisherSerializer,GameGenreSerializer,ListGameGenreSerializer
+from games_database_api.serializer import GameSerializer,GenreSerializer,FranchiseSerializer,GameGenre,DeveloperSerializer,PublisherSerializer,GameGenreSerializer,ListGameGenreSerializer,ListGameFrenchiseSerializer
 
 class GamesViewSet(viewsets.ModelViewSet):
     queryset = Game.objects.all()
@@ -27,3 +27,8 @@ class ListGameGenreViewSet(generics.ListAPIView):
         queryset = GameGenre.objects.filter(genre_id =self.kwargs['pk'])
         return queryset
     serializer_class = ListGameGenreSerializer
+class ListGameFranchiseViewSet(generics.ListAPIView):
+    def get_queryset(self):
+        queryset = Game.objects.filter(franchise_id = self.kwargs['pk'])
+        return queryset
+    serializer_class = ListGameFrenchiseSerializer

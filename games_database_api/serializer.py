@@ -31,4 +31,10 @@ class ListGameGenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = GameGenre
         fields = '__all__'
+class ListGameFrenchiseSerializer(serializers.ModelSerializer):
+    game = serializers.ReadOnlyField(source='game.name')
+    franchise = serializers.ReadOnlyField(source='franchise.name')
+    class Meta:
+        model = Game
+        fields = '__all__'
      
