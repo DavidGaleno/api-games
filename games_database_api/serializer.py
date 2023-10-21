@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from games_database_api.models import Game,Genre,Franchise,Developer,Publisher
+from games_database_api.models import Game,Genre,Franchise,Developer,Publisher,GameGenre
 
 class GameSerializer(serializers.ModelSerializer):
     class Meta:
         model = Game
-        fields = ['id','name','genre','release_date','franchise','developer','publisher']
+        fields = ['id','name','release_date','franchise','developer','publisher']
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Genre
@@ -21,4 +21,14 @@ class PublisherSerializer(serializers.ModelSerializer):
     class Meta:
         model= Publisher,
         fields='__all__'
+class GameGenreSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GameGenre
+        fields='__all__'
+class ListGameGenreSerializer(serializers.ModelSerializer):
+    game = serializers.ReadOnlyField(source='game.name')
+    genre = serializers.ReadOnlyField(source='genre.name')
+    class Meta:
+        model = GameGenre
+        fields = '__all__'
      
