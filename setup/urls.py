@@ -19,7 +19,10 @@ from django.urls import include, path
 from games_database_api.views import GamesViewSet,GenreViewSet,FranchiseViewSet,DeveloperViewSet,PublisherViewSet,GameGenreViewSet,ListGameGenreViewSet,ListGameFranchiseViewSet
 from rest_framework import routers
 
+#Roteador
 router = routers.DefaultRouter()
+
+#Rotas das Entidades. Não inclui os filtros
 router.register('games',viewset=GamesViewSet,basename='Games')
 router.register('genres',viewset=GenreViewSet,basename='Genres')
 router.register('franchises',viewset=FranchiseViewSet,basename='Franchises')
@@ -27,8 +30,12 @@ router.register('developers',viewset=DeveloperViewSet,basename='Developers')
 router.register('publishers',viewset=PublisherViewSet,basename='Publishers')
 router.register('gamegenres',viewset=GameGenreViewSet,basename='GameGenres')
 urlpatterns = [
+    #Rota para perfil de admin
     path('admin/', admin.site.urls),
+    #Rotas de cada uma das entidades
     path('',include(router.urls)),
+    #Filtra jogos de um gênero específico
     path('genres/<int:pk>/games',ListGameGenreViewSet.as_view()),
+    #Filtra jogos de uma franquia especíica
     path('franchises/<int:pk>/games',ListGameFranchiseViewSet.as_view())
 ]
