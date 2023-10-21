@@ -2,8 +2,8 @@ from django.contrib import admin
 from games_database_api.models import Game,Genre,Franchise,Developer,Publisher
 
 class Games(admin.ModelAdmin):
-    list_display = ('id','name','release_date','genre')
-    list_display_links = ('id','name','release_date','genre')
+    list_display = ('id','name','release_date','genre','franchise','developer','publisher')
+    list_display_links = ('id','name','release_date','genre','franchise','developer','publisher')
     search_fields = ('name','id')
     list_per_page = 20
 

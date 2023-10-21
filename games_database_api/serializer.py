@@ -4,7 +4,7 @@ from games_database_api.models import Game,Genre,Franchise,Developer,Publisher
 class GameSerializer(serializers.ModelSerializer):
     class Meta:
         model = Game
-        fields = ['id','name','genre','release_date']
+        fields = ['id','name','genre','release_date','franchise','developer','publisher']
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Genre
