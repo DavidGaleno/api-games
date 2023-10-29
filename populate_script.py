@@ -4,7 +4,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'setup.settings')
 django.setup()
 
 from faker import Faker
-from games_database_api.models import Genre,Developer,Franchise,Game,GameGenre,Publisher
+from games_database_api.models import Genre,Developer,Franchise,Game,GameGenre,Publisher,ProgrammingLanguage,GameEngine,GameProgrammingLanguage
 
 fake = Faker('pt_BR')
 
@@ -100,16 +100,6 @@ def create_franchises():
     franchises = Franchise(name="tomb raider")
     franchises.save()
 
-def create_games():
-    game = Game(name="resident evil 4", franchise= Franchise.objects.get(name="resident evil"), developer= Developer.objects.get(name="capcom"), publisher = Publisher.objects.get(name="capcom"), release_date = '2005-01-11' )
-    game.save()    
-    game = Game(name="resident evil 4 remake", franchise= Franchise.objects.get(name="resident evil"), developer= Developer.objects.get(name="capcom"), publisher = Publisher.objects.get(name="capcom"), release_date = '2023-03-24' )
-    game.save()
-    game = Game(name="call of duty modern warfare 3 (2023)", franchise= Franchise.objects.get(name="call of duty"), developer= Developer.objects.get(name="infinity ward"), publisher = Publisher.objects.get(name="activision"), release_date = '2023-11-10' )
-    game.save()
-    game = Game(name="mortal kombat 1 (2023)", franchise= Franchise.objects.get(name="mortal kombat"), developer= Developer.objects.get(name="netherealm"), publisher = Publisher.objects.get(name="warner bros"), release_date = '2023-09-14' )
-    game.save()
-
 def create_gamegenre():
      gamegenre = GameGenre(game=Game.objects.get(name="resident evil 4"),genre=Genre.objects.get(name='survival horror'))
      gamegenre.save()    
@@ -122,11 +112,60 @@ def create_gamegenre():
      gamegenre = GameGenre(game=Game.objects.get(name="call of duty modern warfare 3 (2023)"),genre=Genre.objects.get(name='fps'))
      gamegenre.save()      
      gamegenre = GameGenre(game=Game.objects.get(name="mortal kombat 1 (2023)"),genre=Genre.objects.get(name='fighting'))
-     gamegenre.save()       
+     gamegenre.save()  
+
+def  create_programming_language():
+     programmingLanguage = ProgrammingLanguage(name="c#")
+     programmingLanguage.save()    
+     programmingLanguage = ProgrammingLanguage(name="c++")
+     programmingLanguage.save() 
+     programmingLanguage = ProgrammingLanguage(name="c")
+     programmingLanguage.save() 
+     programmingLanguage = ProgrammingLanguage(name="java")
+     programmingLanguage.save() 
+     programmingLanguage = ProgrammingLanguage(name="python")
+     programmingLanguage.save() 
+
+def  create_game_engine():
+     gameEngine = GameEngine(name="re engine")
+     gameEngine.save()    
+     gameEngine = GameEngine(name="unreal engine 4")
+     gameEngine.save() 
+     gameEngine = GameEngine(name="unity")
+     gameEngine.save()
+     gameEngine = GameEngine(name="iw")
+     gameEngine.save()      
+
+def create_games():
+    game = Game(name="resident evil 4", franchise= Franchise.objects.get(name="resident evil"), developer= Developer.objects.get(name="capcom"), publisher = Publisher.objects.get(name="capcom"), release_date = '2005-01-11', gameEngine=GameEngine.objects.get(name="re engine"))
+    game.save()    
+    game = Game(name="resident evil 4 remake", franchise= Franchise.objects.get(name="resident evil"), developer= Developer.objects.get(name="capcom"), publisher = Publisher.objects.get(name="capcom"), release_date = '2023-03-24', gameEngine=GameEngine.objects.get(name="re engine"))
+    game.save()
+    game = Game(name="call of duty modern warfare 3 (2023)", franchise= Franchise.objects.get(name="call of duty"), developer= Developer.objects.get(name="infinity ward"), publisher = Publisher.objects.get(name="activision"), release_date = '2023-11-10', gameEngine=GameEngine.objects.get(name="iw"))
+    game.save()
+    game = Game(name="mortal kombat 1 (2023)", franchise= Franchise.objects.get(name="mortal kombat"), developer= Developer.objects.get(name="netherealm"), publisher = Publisher.objects.get(name="warner bros"), release_date = '2023-09-14',gameEngine=GameEngine.objects.get(name="unreal engine 4") )
+    game.save()
+
+
+def create_game_programming_language():
+    gameProgrammingLanguage = GameProgrammingLanguage (game=Game.objects.get(name="call of duty modern warfare 3 (2023)"),programmingLanguage=ProgrammingLanguage.objects.get(name="c++"))
+    gameProgrammingLanguage.save()
+    gameProgrammingLanguage = GameProgrammingLanguage (game=Game.objects.get(name="call of duty modern warfare 3 (2023)"),programmingLanguage=ProgrammingLanguage.objects.get(name="python"))
+    gameProgrammingLanguage.save()
+    gameProgrammingLanguage = GameProgrammingLanguage (game=Game.objects.get(name="call of duty modern warfare 3 (2023)"),programmingLanguage=ProgrammingLanguage.objects.get(name="c"))
+    gameProgrammingLanguage.save()
+    gameProgrammingLanguage = GameProgrammingLanguage (game=Game.objects.get(name="resident evil 4 remake"),programmingLanguage=ProgrammingLanguage.objects.get(name="c#"))
+    gameProgrammingLanguage.save()
+    gameProgrammingLanguage = GameProgrammingLanguage (game=Game.objects.get(name="resident evil 4 remake"),programmingLanguage=ProgrammingLanguage.objects.get(name="c++"))
+    gameProgrammingLanguage.save()
 
 create_developers()
 create_franchises()
 create_genres()
 create_publishers()
+create_programming_language()
+create_game_engine()
 create_games()
 create_gamegenre()
+create_game_programming_language()
+
