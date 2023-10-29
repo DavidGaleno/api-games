@@ -16,11 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from games_database_api.views import GamesViewSet,GenreViewSet,FranchiseViewSet,DeveloperViewSet,PublisherViewSet,GameGenreViewSet,ListGameGenreViewSet,ListGameFranchiseViewSet
+from games_database_api.views import GamesViewSet,GenreViewSet,FranchiseViewSet,DeveloperViewSet,PublisherViewSet,GameGenreViewSet,ListGameGenreViewSet,ListGameFranchiseViewSet,ListGameDeveloperViewSet
 from rest_framework import routers
+
 
 #Roteador
 router = routers.DefaultRouter()
+
+
+
 
 #Rotas das Entidades. Não inclui os filtros
 router.register('games',viewset=GamesViewSet,basename='Games')
@@ -35,7 +39,8 @@ urlpatterns = [
     #Rotas de cada uma das entidades
     path('',include(router.urls)),
     #Filtra jogos de um gênero específico
-    path('genres/<int:pk>/games',ListGameGenreViewSet.as_view()),
+    path('genres/<int:pk>/games',ListGameGenreViewSet.as_view(),name='games-genre'),
     #Filtra jogos de uma franquia especíica
-    path('franchises/<int:pk>/games',ListGameFranchiseViewSet.as_view())
+    path('franchises/<int:pk>/games',ListGameFranchiseViewSet.as_view(),name='games-franchise'),
+    path('developers/<int:pk>/games',ListGameDeveloperViewSet.as_view(),name='games-developer')
 ]

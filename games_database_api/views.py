@@ -1,11 +1,15 @@
 from django.http import JsonResponse
-from rest_framework import viewsets,generics
+from rest_framework import viewsets,generics,filters
 from games_database_api.models import Game,Genre,Franchise,Publisher,Developer
-from games_database_api.serializer import GameSerializer,GenreSerializer,FranchiseSerializer,GameGenre,DeveloperSerializer,PublisherSerializer,GameGenreSerializer,ListGameGenreSerializer,ListGameFrenchiseSerializer
+from games_database_api.serializer import GameSerializer,GenreSerializer,FranchiseSerializer,GameGenre,DeveloperSerializer,PublisherSerializer,GameGenreSerializer,ListGameGenreSerializer,ListGameFrenchiseSerializer,ListGameDeveloperSerializer,ListGamePublisherSerializer
+from django_filters.rest_framework import DjangoFilterBackend
+
 
 class GamesViewSet(viewsets.ModelViewSet):
     queryset = Game.objects.all()
     serializer_class = GameSerializer
+    filter_backends = [DjangoFilterBackend,filters.OrderingFilter]
+    ordering_fields = ['name']
 
 class FranchiseViewSet(viewsets.ModelViewSet):
     queryset = Franchise.objects.all()
@@ -32,3 +36,13 @@ class ListGameFranchiseViewSet(generics.ListAPIView):
         queryset = Game.objects.filter(franchise_id = self.kwargs['pk'])
         return queryset
     serializer_class = ListGameFrenchiseSerializer
+class ListGameDeveloperViewSet(generics.ListAPIView):
+    def get_queryset(self):
+        queryset = Game.objects.filter(developer_id = self.kwargs['pk'])
+        return queryset
+    serializer_class = ListGameDeveloperSerializer
+class ListGameDeveloperViewSet(generics.ListAPIView):
+    def get_queryset(self):
+        queryset = Game.objects.filter(publisher_id = self.kwargs['pk'])
+        return queryset
+    serializer_class = ListGamePublisherSerializer

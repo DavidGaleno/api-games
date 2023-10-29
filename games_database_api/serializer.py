@@ -15,11 +15,11 @@ class FranchiseSerializer(serializers.ModelSerializer):
         fields='__all__'
 class DeveloperSerializer(serializers.ModelSerializer):
     class Meta:
-        model= Developer,
+        model= Developer
         fields='__all__'
 class PublisherSerializer(serializers.ModelSerializer):
     class Meta:
-        model= Publisher,
+        model= Publisher
         fields='__all__'
 class GameGenreSerializer(serializers.ModelSerializer):
     class Meta:
@@ -37,4 +37,17 @@ class ListGameFrenchiseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Game
         fields = '__all__'
+class ListGameDeveloperSerializer(serializers.ModelSerializer):
+    game = serializers.ReadOnlyField(source='game.name')
+    developer = serializers.ReadOnlyField(source='developer.name')
+    class Meta:
+        model = Game
+        fields = '__all__'
+class ListGamePublisherSerializer(serializers.ModelSerializer):
+    game = serializers.ReadOnlyField(source='game.name')
+    publisher = serializers.ReadOnlyField(source='publisher.name')
+    class Meta:
+        model = Game
+        fields = '__all__'
+
      
