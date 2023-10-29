@@ -8,8 +8,9 @@ from django_filters.rest_framework import DjangoFilterBackend
 class GamesViewSet(viewsets.ModelViewSet):
     queryset = Game.objects.all()
     serializer_class = GameSerializer
-    filter_backends = [DjangoFilterBackend,filters.OrderingFilter]
+    filter_backends = [DjangoFilterBackend,filters.OrderingFilter,filters.SearchFilter]
     ordering_fields = ['name']
+    search_fields = ['name','email']
 
 class FranchiseViewSet(viewsets.ModelViewSet):
     queryset = Franchise.objects.all()
