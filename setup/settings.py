@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'games_database_api',
     'django_filters',
-    'django.contrib.staticfiles',  #
-   'drf_yasg',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
