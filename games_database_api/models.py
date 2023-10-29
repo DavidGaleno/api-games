@@ -23,7 +23,7 @@ class Publisher(models.Model):
         return self.name
     
 class Game(models.Model):
-    name =  models.CharField(max_length=30,unique=True)
+    name =  models.CharField(max_length=100,unique=True)
     release_date = models.DateField()
     franchise = models.ForeignKey(Franchise,on_delete=models.CASCADE)
     publisher = models.ForeignKey(Publisher,on_delete=models.CASCADE)
