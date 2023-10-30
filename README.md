@@ -40,7 +40,7 @@ Segue abaixo o link para download de cada uma das ferramentas:
 13. Por fim, leia os cuidados abaixo
 #### Cuidados
 
-*** Caso exclua, por exemplo, um iem da tabela gênero, todos os jogos que possuem esse gênero serão excluídos. Isso vale para todas as relações de chave estrangeira <br>
+*** Caso exclua, por exemplo, um item da tabela gênero, todos os jogos que possuem esse gênero serão excluídos. Isso vale para todas as relações de chave estrangeira <br>
 
 
 ## Contribuidores
