@@ -8,7 +8,7 @@ O projeto é uma api que permite a transmissão de informações sobre jogos de 
 A API procura oferecer uma base de informações de jogos para ser utilizada ou personalizada por outros usuários
 
 ## Arquitetura
-![Arquitetura Games Database API](https://github.com/DavidGaleno/games-database-API/assets/92187957/bc809d81-23d4-4663-9e50-ddbbb3f29be0)
+![Arquitetura Games Database API](https://github.com/DavidGaleno/games-database-API/assets/92187957/1b2d14b2-9012-4074-afa1-94c95d27033c)
 
 ## Requisitos
 
