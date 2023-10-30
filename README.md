@@ -2,21 +2,12 @@
 
 ## Introdução
 O projeto é uma api que permite a transmissão de informações sobre jogos de video-game.
-A api poderá ser utilizada por 3 públicos: Acionistas, Fans e Programadores
 
 ### Objetivo
 
-A API atua tanto procurando dados na base de dados, quanto filtrando os dados de acordo com o público consumidor.
-
-**Cada público terá seu próprio objetivo:**
-
-- Acionistas terão uma prioridade por informações financeiras, que serão utilizadas para manejar seus investimentos
-- Fans utilizaram somente por diversão, para saber meus sobre seus jogos favoritos
-- Os programadores irão procurar informações técnicas sobre os jogos, seja para se basearem para seus próprios jogos, seja por curiosidade
+A API procura oferecer uma base de informações de jogos para ser utilizada ou personalizada por outros usuários
 
 ## Arquitetura
-- Por ser uma API que irá lidar somente com um tipo de entidade, iremos utilizar uma arquitetura monolítica
-- Iremos utilizar dois bancos para comparações, visto que foi pedido por nosso professor
 ![Arquitetura Games Database API](https://github.com/DavidGaleno/games-database-API/assets/92187957/bc809d81-23d4-4663-9e50-ddbbb3f29be0)
 
 ## Requisitos
@@ -33,18 +24,23 @@ Segue abaixo o link para download de cada uma das ferramentas:
 
 ### Execução
 
-1. Selecione o local da sua máquina onde deseja salvar o projeto
-2. Abra o powershell ou cmd no local selecionado
-3. Digite  ```git clone https://github.com/DavidGaleno/games-database-API.git``` para clonar o repositório
-4. Digite cd games_database_api
-5. Digite ```pip install -r requirements.txt``` para instalar as dependências
-6. Digite ```python manage.py runserver``` para executar a api
-7. Acesse o link ```http://localhost:8000/``` para ver quais entidades e as operações que podem ser realizadas com cada uma delas
-8. Agora abra o Insomnia e realize as requisições na URI desejada
-9. Por fim, leia os cuidados abaixo
+1. Crie no postgre uma database chamada games_database_api
+2. Selecione o local da sua máquina onde deseja salvar o projeto
+3. Abra o powershell ou cmd no local selecionado
+4. Digite  ```git clone https://github.com/DavidGaleno/games-database-API.git``` para clonar o repositório
+5. Digite cd games_database_api
+6. Digite ```pip install -r requirements.txt``` para instalar as dependências
+7. Entre na pasta setup e acesse o arquivo settings.py
+8. Procure por DATABASES e altere o USER para o seu usuário do postgre e o PASSWORD para sua senha do postgre
+9. Caso esteja usando Linux, altere o HOST para  ``` 127.0.0.1 ```
+10. Execute o comando ``` python populate_scripy.py ``` para popular o banco de dados 
+10. Digite ```python manage.py runserver``` para executar a api
+11. Acesse o link ```http://localhost:8000/docs``` (Windows) ```http://127.0.0.1:8000/docs``` (Linux) para ver quais entidades e quais são as rotas da API
+12. Agora abra o Insomnia e realize as requisições na URI desejada
+13. Por fim, leia os cuidados abaixo
 #### Cuidados
 
-*** Ao excluir um item da tabela genre, franchis, developer ou publisher que está sendo usado por um item da tabela game, ambos serão excluídos <br>
+*** Caso exclua, por exemplo, um iem da tabela gênero, todos os jogos que possuem esse gênero serão excluídos. Isso vale para todas as relações de chave estrangeira <br>
 
 
 ## Contribuidores
