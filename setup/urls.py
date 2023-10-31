@@ -22,12 +22,11 @@ schema_view = get_schema_view(
       title="GAMES DATABASE API",
       default_version='v1',
       description="Essa é uma API de jogos que contendo desenvolvedoras, publicadoras, gêneros e jogos. Ela já possui alguns filtros embutidos\n Nossa proposta é oferecer algo que pode ser consultado por fans e programadores para conseguirem suas respectivas informações\n A API é livre para ser modificada e usada para outros fins",
-      terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="contact@snippets.local"),
       license=openapi.License(name="BSD License"),
    ),
    public=True,
    permission_classes=(permissions.AllowAny,),
+
 )
 
 
