@@ -33,7 +33,7 @@ Segue abaixo o link para download de cada uma das ferramentas:
 7. Entre na pasta setup e acesse o arquivo settings.py
 8. Procure por DATABASES e altere o USER para o seu usuário do postgre e o PASSWORD para sua senha do postgre
 9. Caso esteja usando Linux, altere o HOST para  ``` 127.0.0.1 ```
-10. Execute o comando ``` python populate_scripy.py ``` para popular o banco de dados 
+10. Execute o comando ``` python populate_script.py ``` para popular o banco de dados 
 10. Digite ```python manage.py runserver``` para executar a api
 11. Acesse o link ```http://localhost:8000/docs``` (Windows) ```http://127.0.0.1:8000/docs``` (Linux) para ver quais entidades e quais são as rotas da API
 12. Agora abra o Insomnia e realize as requisições na URI desejada
