@@ -33,11 +33,13 @@ Segue abaixo o link para download de cada uma das ferramentas:
 7. Entre na pasta setup e acesse o arquivo settings.py
 8. Procure por DATABASES e altere o USER para o seu usuário do postgre e o PASSWORD para sua senha do postgre
 9. Caso esteja usando Linux, altere o HOST para  ``` 127.0.0.1 ```
-10. Execute o comando ``` python populate_script.py ``` para popular o banco de dados 
-10. Digite ```python manage.py runserver``` para executar a api
-11. Acesse o link ```http://localhost:8000/docs``` (Windows) ```http://127.0.0.1:8000/docs``` (Linux) para ver quais entidades e quais são as rotas da API
-12. Agora abra o Insomnia e realize as requisições na URI desejada
-13. Por fim, leia os cuidados abaixo
+10. Abra o PGAdmin 4 e cria uma base de dados chamada ``` games_database_api ``` no postgree
+11. Execute o comando ``` python manage.py migrate ``` para criar as tabelas no banco de dados 
+12. Execute o comando ``` python populate_script.py ``` para popular o banco de dados 
+13. Digite ```python manage.py runserver``` para executar a api
+14. Acesse o link ```http://localhost:8000/docs``` (Windows) ```http://127.0.0.1:8000/docs``` (Linux) para ver quais entidades e quais são as rotas da API
+15. Agora abra o Insomnia e realize as requisições na URI desejada
+16. Por fim, leia os cuidados abaixo
 #### Cuidados
 
 *** Caso exclua, por exemplo, um item da tabela gênero, todos os jogos que possuem esse gênero serão excluídos. Isso vale para todas as relações de chave estrangeira <br>
