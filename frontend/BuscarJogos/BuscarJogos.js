@@ -32,6 +32,7 @@ function performSearch(
       )
         .then((res) => res.json())
         .then((data) => data);
+
       const genresArray = await fetch(`http://127.0.0.1:8000/genres`, {
         method: "GET",
         mode: "cors",

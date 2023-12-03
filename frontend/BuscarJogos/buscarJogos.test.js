@@ -34,14 +34,6 @@ describe("performSearch", () => {
     performSearch(progressBar, progressContainer, dataContent, inputField);
   });
 
-  // Event listener para o campo de entrada para lidar com a tecla Enter
-  inputField.addEventListener("keypress", function (event) {
-    // Verificar se a tecla pressionada é Enter (código 13)
-    if (event.key === "Enter") {
-      performSearch(progressBar, progressContainer, dataContent, inputField);
-    }
-  });
-
   test("deve exibir uma mensagem se o campo de busca estiver vazio", async () => {
     inputField.value = "";
 
