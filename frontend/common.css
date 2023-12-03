@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-image: url("./images/fundoLigth.png");
+  background-size: cover;
+  height: 100vh;
+  margin: 0; /* Add this line to remove default body margin */
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 700;
+  background-color: white;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+}
+
+header nav a {
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #555;
+}
+
+.logo {
+  width: 200px;
+}
+
+.home,
+.maisInfo {
+  transition: 0.3s ease-in-out;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+li {
+  transition: transform 0.3s;
+}
+
+li:hover {
+  transform: scale(1.1);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 1.1s;
+}
+
+main {
+  width: 100%;
+  flex: 1;
+}
+.divPrincipal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+@media (max-width: 535px) {
+  header {
+    padding: 10px 1px;
+  }
+  .logo {
+    width: 150px;
+  }
+}

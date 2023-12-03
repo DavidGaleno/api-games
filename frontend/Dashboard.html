@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet" href="Dashboard.css" />
+    <link rel="stylesheet" href="common.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/favicon (1).png" type="image/x-icon" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="./images/White_Minimalist_Simple_Aesthetic_Name_Twitter_Header__2_-removebg-preview.png"
+        alt="Logo"
+      />
+      <nav>
+        <ul>
+          <li class="home"><a href="./BuscarJogos.html">Buscar Jogos</a></li>
+          <li class="maisInfo"><a href="Dashboard.html">Dash</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="divPrincipal">
+        <div class="dash">
+          
+          <div class="divsmenores">
+            <div class="small-div">
+              <h3 class="txtTitulo">
+                Quantidade de Jogos por Ano
+              </h3><div id="chartline"></div></div>
+            <div class="small-div"><h3 class="txtTitulo">
+              Quantidade de Jogos por Gênero
+            </h3><div id="chartdonut"></div></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const createCharts = async () => {
+        const jogos = await fetch("http://127.0.0.1:8000/games/")
+          .then((res) => res.json())
+          .then((data) => data);
+        const generos = await fetch("http://127.0.0.1:8000/genres/")
+          .then((res) => res.json())
+          .then((data) => data);
+        const jogosGeneros = await fetch("http://127.0.0.1:8000/game_genres/")
+          .then((res) => res.json())
+          .then((data) => data);
+
+        const jogosDates = jogos.map((jogo) => {
+          const date = new Date(jogo.release_date);
+          return date.getFullYear();
+        });
+        const jogosDatesUnique = [...new Set(jogosDates)].sort();
+
+        var optionsAnos = {
+          chart: {
+            type: "line",
+          },
+          series: [
+            {
+              name: "",
+              data: jogosDatesUnique.map(
+                (yearUnique) =>
+                  jogosDates.filter((year) => year === yearUnique).length
+              ),
+            },
+          ],
+          responsive: [
+            {
+              breakpoint: 633,
+              options: {
+                chart: {
+                  width: 400,
+                },
+                legend: {
+                  position: "bottom",
+                },
+              },
+            },
+            {
+              breakpoint: 447,
+              options: {
+                chart: {
+                  width: 300,
+                },
+                legend: {
+                  position: "bottom",
+                },
+              },
+            },
+            {
+              breakpoint: 375,
+              options: {
+                chart: {
+                  width: 250,
+                },
+                legend: {
+                  position: "bottom",
+                },
+              },
+            },
+          ],
+          xaxis: {
+            categories: [...new Set(jogosDates)].sort(),
+          },
+        };
+
+        var chartLine = new ApexCharts(
+          document.querySelector("#chartline"),
+          optionsAnos
+        );
+
+        chartLine.render();
+
+        var optionsGeneros = {
+          chart: {
+            type: "donut", // 'pie' para um gráfico de pizza ou 'donut' para um gráfico de donut
+          },
+          series: generos.map(
+            (genero) =>
+              jogosGeneros.filter(
+                (jogoGenero) => jogoGenero.genre === genero.id
+              ).length
+          ),
+          labels: generos.map((genero) => genero.name),
+          responsive: [
+            {
+              breakpoint: 633,
+              options: {
+                chart: {
+                  width: 400
+                },
+                legend: {
+                  position: "right",
+                },
+              },
+            },
+            {
+              breakpoint: 447,
+              options: {
+                chart: {
+                  width: 350
+                },
+                legend: {
+                  position: "right",
+                },
+              },
+            },
+            {
+              breakpoint: 400,
+              options: {
+                chart: {
+                  width: 320,
+                },
+                legend: {
+                  position: "bottom",
+                },
+              },
+            },
+            
+          ],
+        };
+
+        // Inicializar o gráfico
+        var chartDonut = new ApexCharts(
+          document.getElementById("chartdonut"),
+          optionsGeneros
+        );
+        chartDonut.render();
+      };
+      createCharts();
+    </script>
+  </body>
+</html>
