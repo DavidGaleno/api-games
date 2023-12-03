@@ -24,6 +24,7 @@ Segue abaixo o link para download de cada uma das ferramentas:
 
 ### Execução
 
+#### Back-End:
 1. Abra o PGAmin4 e crie no postgre uma database chamada ```games_database_api```
 2. Selecione o local da sua máquina onde deseja salvar o projeto
 3. Abra o powershell ou cmd no local selecionado
@@ -43,6 +44,9 @@ Segue abaixo o link para download de cada uma das ferramentas:
 
 *** Caso exclua, por exemplo, um item da tabela gênero, todos os jogos que possuem esse gênero serão excluídos. Isso vale para todas as relações de chave estrangeira <br>
 
+#### Front-End:
+1. Insira no terminal npm install  para instalar as dependências
+2. Copie o caminho do arquivo ```Dashboard.html``` ou ```BuscaJogos.html``` e insira no navegador. Você pode também utilizar a extensão LiveServer no Visual Studio Code.
 
 ## Contribuidores
 <table>
