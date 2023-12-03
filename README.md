@@ -1,11 +1,11 @@
 # games-database api
 
 ## Introdução
-O projeto é uma api que permite a transmissão de informações sobre jogos de video-game.
+O projeto é uma api que permite a transmissão de informações sobre jogos de video-game. Fizemos um front-end para demonstrar o uso dessa API para os usuários
 
 ### Objetivo
 
-A API procura oferecer uma base de informações de jogos para ser utilizada ou personalizada por outros usuários
+A API procura oferecer uma base de informações de jogos para ser utilizada ou personalizada por outros usuários na informação de dados e estatísticas
 
 ## Arquitetura
 ![Arquitetura Games Database API drawio](https://github.com/DavidGaleno/games-database-API/assets/92187957/b77eefdc-1970-4aaf-92bc-fa4bc98efefa)
