@@ -8,7 +8,7 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
 #Views
-from games_database_api.views import GamesViewSet,GenreViewSet,FranchiseViewSet,DeveloperViewSet,PublisherViewSet,GameGenreViewSet,ListGameGenreViewSet,ListGameFranchiseViewSet,ListGameDeveloperViewSet,ProgrammingLanguageViewSet,GameEngineViewSet,GameProgrammingLanguageViewSet,ListGameProgrammingLanguageViewSet,ListGameGameEngineViewSet,ListGamePublisherViewSet
+from games_database_api.views import GamesViewSet,GenreViewSet,FranchiseViewSet,DeveloperViewSet,PublisherViewSet,GameGenreViewSet,ListGameGenreViewSet,ListGameFranchiseViewSet,ListGameDeveloperViewSet,ProgrammingLanguageViewSet,GameEngineViewSet,GameProgrammingLanguageViewSet,ListGameProgrammingLanguageViewSet,ListGameGameEngineViewSet,ListGamePublisherViewSet,GetGameByNameViewSet
 
 
  
@@ -63,4 +63,5 @@ urlpatterns = [
     path('programming_language/<int:pk>/games',ListGameProgrammingLanguageViewSet.as_view(),name='games-programming-language'),
     #Filtra jogos de uma engine específica
     path('game_engine/<int:pk>/games',ListGameGameEngineViewSet.as_view(),name='games-game-engine'),
+    path('games/name/<str:name>/', GetGameByNameViewSet.as_view(), name='gameByName')
 ]

@@ -1,5 +1,8 @@
 from django.http import JsonResponse
+from django.db.models import Q
 from rest_framework import viewsets,generics,filters
+from rest_framework.generics import RetrieveAPIView
+
 from games_database_api.models import Game,Genre,Franchise,Publisher,Developer,ProgrammingLanguage,GameEngine,GameProgrammingLanguage
 
 from games_database_api.serializer import GameSerializer,GenreSerializer,FranchiseSerializer,GameGenre,DeveloperSerializer,PublisherSerializer,GameGenreSerializer,ListGameGenreSerializer,ListGameFranchiseSerializer,ListGameDeveloperSerializer,ListGamePublisherSerializer,ProgrammingLanguageSerializer,GameEngineSerializer,GameProgrammingLanguageSerializer,ListGameGameEngineSerializer,ListGameProgrammingLanguageSerializer
@@ -9,6 +12,13 @@ from django_filters.rest_framework import DjangoFilterBackend
 class GamesViewSet(viewsets.ModelViewSet):
     queryset = Game.objects.all()
     serializer_class = GameSerializer
+
+class GetGameByNameViewSet(generics.ListAPIView):
+    serializer_class = GameSerializer
+    def get_queryset(self):
+        search_query = self.kwargs['name']
+        return Game.objects.filter(Q(name__icontains=search_query))
+
 
 class ProgrammingLanguageViewSet(viewsets.ModelViewSet):
     queryset = ProgrammingLanguage.objects.all()
