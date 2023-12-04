@@ -71,6 +71,12 @@ def create_developers():
     developer.save()
     developer = Developer(name="infinity ward")
     developer.save()
+    developer = Developer(name="dice")
+    developer.save()
+    developer = Developer(name="guerrilla games")
+    developer.save()
+    developer = Developer(name="naughty dog")
+    developer.save()
 
 
 def create_publishers():
@@ -106,6 +112,9 @@ def create_publishers():
     publisher.save()
     publisher = Publisher(name="ubisoft")
     publisher.save()
+    publisher = Publisher(name="naughty dog")
+    publisher.save()
+    
 
 
 def create_franchises():
@@ -145,15 +154,15 @@ def create_franchises():
     franchises.save()
     franchises = Franchise(name="far cry")
     franchises.save()
+    franchises = Franchise(name="watch dogs")
+    franchises.save()
+    franchises = Franchise(name="horizon")
+    franchises.save()
+    franchises = Franchise(name="the last of us")    
+    franchises.save()
 
 
 def create_gamegenre():
-    gamegenre = GameGenre(game=Game.objects.get(
-        name="resident evil 4"), genre=Genre.objects.get(name='survival horror'))
-    gamegenre.save()
-    gamegenre = GameGenre(game=Game.objects.get(
-        name="resident evil 4"), genre=Genre.objects.get(name='action/adventure'))
-    gamegenre.save()
     gamegenre = GameGenre(game=Game.objects.get(
         name="resident evil 4 remake"), genre=Genre.objects.get(name='survival horror'))
     gamegenre.save()
@@ -161,7 +170,43 @@ def create_gamegenre():
         name="resident evil 4 remake"), genre=Genre.objects.get(name='action/adventure'))
     gamegenre.save()
     gamegenre = GameGenre(game=Game.objects.get(
+        name="resident evil 2 remake"), genre=Genre.objects.get(name='survival horror'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="resident evil 2 remake"), genre=Genre.objects.get(name='action/adventure'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="resident evil 3 remake"), genre=Genre.objects.get(name='survival horror'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="resident evil 3 remake"), genre=Genre.objects.get(name='action/adventure'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="resident evil 7"), genre=Genre.objects.get(name='survival horror'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="resident evil 7"), genre=Genre.objects.get(name='action/adventure'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="resident evil village"), genre=Genre.objects.get(name='survival horror'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="the last of us part 1"), genre=Genre.objects.get(name='action/adventure'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="the last of us part 1"), genre=Genre.objects.get(name='survival horror'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="resident evil village"), genre=Genre.objects.get(name='action/adventure'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
         name="call of duty modern warfare 3 (2023)"), genre=Genre.objects.get(name='fps'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="battlefield 3"), genre=Genre.objects.get(name='fps'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="battlefield 4"), genre=Genre.objects.get(name='fps'))
     gamegenre.save()
     gamegenre = GameGenre(game=Game.objects.get(
         name="mortal kombat 1 (2023)"), genre=Genre.objects.get(name='fighting'))
@@ -185,16 +230,79 @@ def create_gamegenre():
         name="doom (2016)"), genre=Genre.objects.get(name='fps'))
     gamegenre.save()
     gamegenre = GameGenre(game=Game.objects.get(
+        name="doom eternal"), genre=Genre.objects.get(name='fps'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
         name="assassin's creed 1"), genre=Genre.objects.get(name='sandbox'))
     gamegenre.save()
     gamegenre = GameGenre(game=Game.objects.get(
         name="assassin's creed 1"), genre=Genre.objects.get(name='action/adventure'))
     gamegenre.save()
     gamegenre = GameGenre(game=Game.objects.get(
+        name="assassin's creed 2"), genre=Genre.objects.get(name='sandbox'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="assassin's creed 2"), genre=Genre.objects.get(name='action/adventure'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="assassin's creed brotherhood"), genre=Genre.objects.get(name='sandbox'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="assassin's creed brotherhood"), genre=Genre.objects.get(name='action/adventure'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="assassin's creed revelations"), genre=Genre.objects.get(name='sandbox'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="assassin's creed revelations"), genre=Genre.objects.get(name='action/adventure'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="assassin's creed 4"), genre=Genre.objects.get(name='sandbox'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="assassin's creed 4"), genre=Genre.objects.get(name='action/adventure'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="assassin's creed unity"), genre=Genre.objects.get(name='sandbox'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="assassin's creed unity"), genre=Genre.objects.get(name='action/adventure'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="watch dogs"), genre=Genre.objects.get(name='sandbox'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="watch dogs"), genre=Genre.objects.get(name='action/adventure'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="watch dogs 2"), genre=Genre.objects.get(name='sandbox'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="watch dogs 2"), genre=Genre.objects.get(name='action/adventure'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="watch dogs legion"), genre=Genre.objects.get(name='sandbox'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="watch dogs legion"), genre=Genre.objects.get(name='action/adventure'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="far cry 6"), genre=Genre.objects.get(name='sandbox'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="far cry 6"), genre=Genre.objects.get(name='fps'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
         name="far cry 5"), genre=Genre.objects.get(name='fps'))
     gamegenre.save()
     gamegenre = GameGenre(game=Game.objects.get(
         name="far cry 5"), genre=Genre.objects.get(name='sandbox'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="horizon: zero dawn"), genre=Genre.objects.get(name='sandbox'))
+    gamegenre.save()
+    gamegenre = GameGenre(game=Game.objects.get(
+        name="horizon: zero dawn"), genre=Genre.objects.get(name='action/adventure'))
     gamegenre.save()
 
 
@@ -234,14 +342,39 @@ def create_game_engine():
     gameEngine.save()
     gameEngine = GameEngine(name="dunia engine")
     gameEngine.save()
-
+    gameEngine = GameEngine(name="frosbite")
+    gameEngine.save()
+    gameEngine = GameEngine(name="disrupt")
+    gameEngine.save()
+    gameEngine = GameEngine(name="decima")
+    gameEngine.save()
+    gameEngine = GameEngine(name="tempest engine")
+    gameEngine.save()
 
 def create_games():
-    game = Game(name="resident evil 4", franchise=Franchise.objects.get(name="resident evil"), developer=Developer.objects.get(
-        name="capcom"), publisher=Publisher.objects.get(name="capcom"), release_date='2005-01-11', gameEngine=GameEngine.objects.get(name="re engine"))
+    game = Game(name="resident evil 1 remake", franchise=Franchise.objects.get(name="resident evil"), developer=Developer.objects.get(
+        name="capcom"), publisher=Publisher.objects.get(name="capcom"), release_date='2002-03-22', gameEngine=GameEngine.objects.get(name="re engine"))
+    game.save()
+    game = Game(name="resident evil 2 remake", franchise=Franchise.objects.get(name="resident evil"), developer=Developer.objects.get(
+        name="capcom"), publisher=Publisher.objects.get(name="capcom"), release_date='2019-01-25', gameEngine=GameEngine.objects.get(name="re engine"))
+    game.save()
+    game = Game(name="resident evil 3 remake", franchise=Franchise.objects.get(name="resident evil"), developer=Developer.objects.get(
+        name="capcom"), publisher=Publisher.objects.get(name="capcom"), release_date='2020-04-03', gameEngine=GameEngine.objects.get(name="re engine"))
     game.save()
     game = Game(name="resident evil 4 remake", franchise=Franchise.objects.get(name="resident evil"), developer=Developer.objects.get(
         name="capcom"), publisher=Publisher.objects.get(name="capcom"), release_date='2023-03-24', gameEngine=GameEngine.objects.get(name="re engine"))
+    game.save()
+    game = Game(name="resident evil 7", franchise=Franchise.objects.get(name="resident evil"), developer=Developer.objects.get(
+        name="capcom"), publisher=Publisher.objects.get(name="capcom"), release_date='2017-01-24', gameEngine=GameEngine.objects.get(name="re engine"))
+    game.save()
+    game = Game(name="resident evil village", franchise=Franchise.objects.get(name="resident evil"), developer=Developer.objects.get(
+        name="capcom"), publisher=Publisher.objects.get(name="capcom"), release_date='2020-06-11', gameEngine=GameEngine.objects.get(name="re engine"))
+    game.save()
+    game = Game(name="battlefield 3", franchise=Franchise.objects.get(name="battlefield"), developer=Developer.objects.get(
+        name="dice"), publisher=Publisher.objects.get(name="e&a"), release_date='2011-10-25', gameEngine=GameEngine.objects.get(name="frosbite"))
+    game.save()
+    game = Game(name="battlefield 4", franchise=Franchise.objects.get(name="battlefield"), developer=Developer.objects.get(
+        name="dice"), publisher=Publisher.objects.get(name="e&a"), release_date='2013-10-29', gameEngine=GameEngine.objects.get(name="frosbite"))
     game.save()
     game = Game(name="call of duty modern warfare 3 (2023)", franchise=Franchise.objects.get(name="call of duty"), developer=Developer.objects.get(
         name="infinity ward"), publisher=Publisher.objects.get(name="activision"), release_date='2023-11-10', gameEngine=GameEngine.objects.get(name="iw"))
@@ -267,11 +400,47 @@ def create_games():
     game = Game(name="doom (2016)", franchise=Franchise.objects.get(name="doom"), developer=Developer.objects.get(
         name="id software"), publisher=Publisher.objects.get(name="bethesda softworks"), release_date='2016-05-13', gameEngine=GameEngine.objects.get(name="doomsday engine"))
     game.save()
+    game = Game(name="doom eternal", franchise=Franchise.objects.get(name="doom"), developer=Developer.objects.get(
+        name="id software"), publisher=Publisher.objects.get(name="bethesda softworks"), release_date='2020-03-20', gameEngine=GameEngine.objects.get(name="doomsday engine"))
+    game.save()
     game = Game(name="assassin's creed 1", franchise=Franchise.objects.get(name="assassin's creed"), developer=Developer.objects.get(
         name="ubisoft"), publisher=Publisher.objects.get(name="ubisoft"), release_date='2007-11-13', gameEngine=GameEngine.objects.get(name="ubisoft anvil"))
     game.save()
+    game = Game(name="assassin's creed 2", franchise=Franchise.objects.get(name="assassin's creed"), developer=Developer.objects.get(
+        name="ubisoft"), publisher=Publisher.objects.get(name="ubisoft"), release_date='2009-11-17', gameEngine=GameEngine.objects.get(name="ubisoft anvil"))
+    game.save()
+    game = Game(name="assassin's creed brotherhood", franchise=Franchise.objects.get(name="assassin's creed"), developer=Developer.objects.get(
+        name="ubisoft"), publisher=Publisher.objects.get(name="ubisoft"), release_date='2010-11-16', gameEngine=GameEngine.objects.get(name="ubisoft anvil"))
+    game.save()
+    game = Game(name="assassin's creed revelations", franchise=Franchise.objects.get(name="assassin's creed"), developer=Developer.objects.get(
+        name="ubisoft"), publisher=Publisher.objects.get(name="ubisoft"), release_date='2011-11-15', gameEngine=GameEngine.objects.get(name="ubisoft anvil"))
+    game.save()
+    game = Game(name="assassin's creed 4", franchise=Franchise.objects.get(name="assassin's creed"), developer=Developer.objects.get(
+        name="ubisoft"), publisher=Publisher.objects.get(name="ubisoft"), release_date='2013-10-19', gameEngine=GameEngine.objects.get(name="ubisoft anvil"))
+    game.save()
+    game = Game(name="assassin's creed unity", franchise=Franchise.objects.get(name="assassin's creed"), developer=Developer.objects.get(
+        name="ubisoft"), publisher=Publisher.objects.get(name="ubisoft"), release_date='2014-11-11', gameEngine=GameEngine.objects.get(name="ubisoft anvil"))
+    game.save()
+    game = Game(name="watch dogs", franchise=Franchise.objects.get(name="watch dogs"), developer=Developer.objects.get(
+        name="ubisoft"), publisher=Publisher.objects.get(name="ubisoft"), release_date='2014-04-27', gameEngine=GameEngine.objects.get(name="disrupt"))
+    game.save()
+    game = Game(name="watch dogs 2", franchise=Franchise.objects.get(name="watch dogs"), developer=Developer.objects.get(
+        name="ubisoft"), publisher=Publisher.objects.get(name="ubisoft"), release_date='2016-11-15', gameEngine=GameEngine.objects.get(name="disrupt"))
+    game.save()
+    game = Game(name="watch dogs legion", franchise=Franchise.objects.get(name="watch dogs"), developer=Developer.objects.get(
+        name="ubisoft"), publisher=Publisher.objects.get(name="ubisoft"), release_date='2020-10-29', gameEngine=GameEngine.objects.get(name="disrupt"))
+    game.save()
     game = Game(name="far cry 5", franchise=Franchise.objects.get(name="far cry"), developer=Developer.objects.get(
         name="ubisoft"), publisher=Publisher.objects.get(name="ubisoft"), release_date='2018-03-27', gameEngine=GameEngine.objects.get(name="dunia engine"))
+    game.save()
+    game = Game(name="far cry 6", franchise=Franchise.objects.get(name="far cry"), developer=Developer.objects.get(
+        name="ubisoft"), publisher=Publisher.objects.get(name="ubisoft"), release_date='2021-10-07', gameEngine=GameEngine.objects.get(name="dunia engine"))
+    game.save()
+    game = Game(name="horizon: zero dawn", franchise=Franchise.objects.get(name="horizon"), developer=Developer.objects.get(
+        name="guerrilla games"), publisher=Publisher.objects.get(name="playstation studios"), release_date='2017-02-28', gameEngine=GameEngine.objects.get(name="decima"))
+    game.save()
+    game = Game(name="the last of us part 1", franchise=Franchise.objects.get(name="the last of us"), developer=Developer.objects.get(
+        name="naughty dog"), publisher=Publisher.objects.get(name="playstation studios"), release_date='2022-11-02', gameEngine=GameEngine.objects.get(name="decima"))
     game.save()
 
 
