@@ -89,7 +89,7 @@ DATABASES = {
         'NAME': 'games_database_api',
         'USER': 'postgres',
         'PASSWORD':'root',
-        'HOST':'localhost',
+        'HOST':'localhost'
     }
 }
 
